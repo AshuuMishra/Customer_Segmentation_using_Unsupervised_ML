@@ -7,8 +7,8 @@ import pandas as pd
 with open('scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
 
-with open('hierarchical.pkl', 'rb') as f:
-    kmeans_model = pickle.load(f)
+with open('gmm.pkl', 'rb') as f:
+    gmm_model = pickle.load(f)
 
 # App title and description
 st.set_page_config(page_title="Customer Segmentation App", page_icon="💼", layout="centered")
