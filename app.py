@@ -43,7 +43,7 @@ if app_mode == "Manual Entry":
 
     if st.button("Predict Cluster"):
         scaled_input = scaler.transform(input_data)
-        cluster_label = gmm.predict(scaled_input)[0]
+        cluster_label = gmm_model.predict(scaled_input)[0]
         
         st.success(f"Predicted Customer Segment: **Cluster {cluster_label}** 🧩")
 
@@ -72,7 +72,7 @@ elif app_mode == "Upload CSV":
                 st.success("CSV looks good! Now predicting clusters...")
                 
                 scaled_data = scaler.transform(data[features])
-                cluster_preds = kmeans_model.predict(scaled_data)
+                cluster_preds = gmm_model.predict(scaled_data)
                 
                 data['Predicted_Cluster'] = cluster_preds
                 st.dataframe(data)
