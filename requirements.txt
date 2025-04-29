@@ -1,0 +1,5 @@
+streamlit
+numpy
+scikit-learn
+pickle
+pandas  # If you're using DataFrames anywhere
