@@ -2,7 +2,7 @@
 
 import streamlit as st
 import pickle
-
+import pandas as pd
 # Load the saved scaler and model
 with open('scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
