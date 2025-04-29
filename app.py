@@ -43,7 +43,7 @@ if app_mode == "Manual Entry":
 
     if st.button("Predict Cluster"):
         scaled_input = scaler.transform(input_data)
-        cluster_label = kmeans_model.predict(scaled_input)[0]
+        cluster_label = gmm.predict(scaled_input)[0]
         
         st.success(f"Predicted Customer Segment: **Cluster {cluster_label}** 🧩")
 
