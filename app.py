@@ -1,7 +1,7 @@
 
 
 import streamlit as st
-
+import pickle
 
 # Load the saved scaler and model
 with open('scaler.pkl', 'rb') as f:
